@@ -2,7 +2,7 @@ const http = require('http');
 const url = require('url');
 const querystring = require('querystring');
 
-const PORT = 3000;
+const PORT = 4000;
 const HOST = 'localhost';
 
 // Simple in-memory storage for testing
