@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nestjs-swagger-api
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://admin:SXtJSHUrtvkOLPbExEolOeMZEUBfGvRi@dpg-d54nnaggjchc7381i9rg-a.virginia-postgres.render.com/nestjstestdb
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromService:
+          type: web
+          name: nestjs-swagger-api
+          property: port
