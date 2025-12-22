@@ -2,6 +2,7 @@ services:
   - type: web
     name: nestjs-swagger-api
     env: node
+    rootDir: test-js
     buildCommand: npm install && npm run build
     startCommand: npm run start:prod
     envVars:
