@@ -13,7 +13,7 @@ import { User } from './user/user.entity';
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      url: process.env.DATABASE_URL || 'postgresql://admin:SXtJSHUrtvkOLPbExEolOeMZEUBfGvRi@dpg-d54nnaggjchc7381i9rg-a.virginia-postgres.render.com/nestjstestdb',
+      url: 'postgresql://admin:SXtJSHUrtvkOLPbExEolOeMZEUBfGvRi@dpg-d54nnaggjchc7381i9rg-a.virginia-postgres.render.com/nestjstestdb',
       entities: [User],
       synchronize: true,
       ssl: {
